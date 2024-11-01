@@ -1,1 +1,1 @@
-Horribly organized configuration.nix
+Horribly organized nix dotfiles
