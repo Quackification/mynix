@@ -107,7 +107,7 @@
       };
       "custom/sleep" = {
         format = "<span font='Awesome 6 Free Regular' color='#f5e0dc'></span>";
-        on-click = "systemctl hibernate";
+        on-click = "systemctl sleep";
         tooltip = false;
       };
       "custom/reboot" = {
