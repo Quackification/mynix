@@ -1,0 +1,98 @@
+*,
+#workspaces button {
+  margin-left: 1px;
+  margin-right: 3px;
+  padding-left: 6px;
+  padding-right: 6px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  font-family: "Awesome 6 Free Regular", "Hack Nerd Font";
+  font-size: 10px;
+  border-radius:10px;
+}
+
+window#waybar {
+  background: transparent;
+}
+
+window#waybar.hidden {
+  opacity: 0;
+}
+
+window {
+  margin-top: 1px;
+  padding-left: 10px;
+  padding-right: 10px;
+  transition: none;
+  color: transparent;
+  background: transparent;
+}
+
+#pulseaudio,
+#clock,
+#power-profiles-daemon {
+  color: #f2cdcd;
+  background: #1e1e2e;
+  padding-left: 7px;
+  padding-right: 14px;
+}
+#memory,
+#cpu,
+#tray,
+#temperature,
+#custom-sleep,
+#custom-reboot,
+#battery {
+  color: #f2cdcd;
+  background: #1e1e2e;
+  padding-right: 15px;
+}
+#custom-shutdown,
+#custom-distro,
+#workspaces {
+  color: #f2cdcd;
+  background: #1e1e2e;
+  border-radius: 10px;
+}
+#custom-distro {
+padding-left: 8px;
+padding-right: 13px;
+font-size: 12px
+}
+#custom-sleep {
+padding-left: 7px;
+padding-right: 10px;
+}
+#custom-reboot {
+padding-left: 7px;
+padding-right: 10px;
+}
+#custom-shutdown {
+padding-left: 7px;
+padding-right: 9px;
+}
+
+#custom-sleep {
+font-weight: bold;
+}
+#tray {
+  color: #f2cdcd;
+  background: #1e1e2e;
+  padding-left: 8px;
+  padding-right: 7px;
+}
+
+#workspaces {
+  padding: 0;
+  padding-left: 1ex;
+  padding-right: 1ex;
+}
+
+#workspaces button {
+  all: initial;
+  border-radius: inherit;
+  padding: 0;
+}
+menu label {
+  color: #ffffff;
+}
