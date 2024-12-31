@@ -81,7 +81,7 @@
         };
         "format" = "{icon} {capacity}%";
         "format-full" = "{icon} {capacity}%";
-        "format-charging" = "<span color='#f5e0dc'> </span> {capacity}%";
+        "format-charging" = "<span color='#f5e0dc'>  </span> {capacity}%";
         "format-plugged" = "<span color='#f5e0dc'> </span> {capacity}%";
         "format-alt" = "{icon}  {time}";
         "format-icons" = ["<span color='#f5e0dc'>  </span>"
@@ -93,7 +93,7 @@
       };	
       memory = {
         interval = 3;
-        format = "<span font='Awesome 6 Free Regular' color='#f5e0dc'> </span>  <span rise='-200'>{}%</span>";
+        format = "<span font='Awesome 6 Free Regular' color='#f5e0dc'>  </span>  <span rise='-200'>{}%</span>";
         tooltip = false;
       };
       cpu = {
