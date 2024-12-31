@@ -81,8 +81,8 @@
         };
         "format" = "{icon} {capacity}%";
         "format-full" = "{icon} {capacity}%";
-        "format-charging" = "  {capacity}%";
-        "format-plugged" = "  {capacity}%";
+        "format-charging" = "<span color='#f5e0dc'> </span> {capacity}%";
+        "format-plugged" = "<span color='#f5e0dc'> </span> {capacity}%";
         "format-alt" = "{icon}  {time}";
         "format-icons" = ["<span color='#f5e0dc'>  </span>"
           "<span color='#f5e0dc'>  </span>"
