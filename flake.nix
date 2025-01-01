@@ -3,8 +3,8 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.11";
-    rust-overlay = {
-      url = "github:oxalica/rust-overlay";
+    fenix = {
+      url = "github:nix-community/fenix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     frc-nix = {
@@ -17,7 +17,7 @@
     };
   };
 
-  outputs = { nixpkgs, rust-overlay, frc-nix, home-manager, ... }: {
+  outputs = { self, nixpkgs, fenix, frc-nix, home-manager, ... }: {
     nixosConfigurations = {
       my-nixos = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
@@ -25,11 +25,18 @@
           ./configuration.nix
           ({ pkgs, ... }: {
             nixpkgs.overlays = [
-            rust-overlay.overlays.default
-            frc-nix.overlays.default
+              fenix.overlays.default
+              frc-nix.overlays.default
             ];
             environment.systemPackages = with pkgs; [ 
-              pkgs.rust-bin.stable.latest.default 
+              (fenix.packages.${system}.complete.withComponents [
+                "cargo"
+                "clippy"
+                "rust-src"
+                "rustc"
+                "rustfmt"
+              ])
+              rust-analyzer-nightly
             ];
           })
           home-manager.nixosModules.home-manager
