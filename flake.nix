@@ -19,7 +19,7 @@
 
   outputs = { self, nixpkgs, fenix, frc-nix, home-manager, ... }: {
     nixosConfigurations = {
-      my-nixos = nixpkgs.lib.nixosSystem {
+      nixos = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
           ./configuration.nix
