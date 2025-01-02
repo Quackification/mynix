@@ -1,7 +1,11 @@
+{pkgs, ...}:
 {
   wayland.windowManager.hyprland = {
     enable = true;
     xwayland.enable = true;
+    plugins = [
+        pkgs.hyprlandPlugins.hyprgrass
+    ];
     settings = {
         "$mainMod" = "SUPER";
         monitor=",preferred,auto,auto";
@@ -197,6 +201,21 @@
             "opacity 0.8, class:kitty"
             "opacity 0.8, title:btop"
         ];
+
+        plugin = {
+            touch_gestures = {
+                sensitivity = 5.0;
+                edge_margin = 20;
+                hyprgrass-bind = [
+                    ", edge:r:l, workspace, +1"
+                    ", edge:l:r, workspace, -1"
+                    ", edge:u:d, exec, rofi -show drun -show-icons"
+                    ", swipe:3:u, exec, rofi -show drun -show-icons"
+                    ", swipe:3:d, killactive"
+                    ", edge:d:u, exec, kill $(pgrep wvkbd-mobintl) || wvkbd-mobintl"
+                ];
+            };
+        };
     };
   };
 }

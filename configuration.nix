@@ -206,6 +206,7 @@
     networkmanagerapplet
     rofi-wayland
     swww
+    wvkbd
 ];
   services.keyd = {
     enable = true;
