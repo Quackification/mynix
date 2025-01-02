@@ -17,7 +17,7 @@
             "swww-daemon"
             "waybar"
             "librewolf"
-            "bash ./start.sh"
+            "dunst"
             "systemctl --user start hyprpolkitagent"
         ];
         env = [
@@ -204,15 +204,21 @@
 
         plugin = {
             touch_gestures = {
-                sensitivity = 5.0;
-                edge_margin = 20;
+                sensitivity = 7.0;
+                long_press_delay = 400;
+                edge_margin = 40;
                 hyprgrass-bind = [
-                    ", edge:r:l, workspace, +1"
-                    ", edge:l:r, workspace, -1"
+                    ", swipe:3:r, movetoworkspace, +1"
+                    ", swipe:3:l, movetoworkspace, -1"
                     ", edge:u:d, exec, rofi -show drun -show-icons"
                     ", swipe:3:u, exec, rofi -show drun -show-icons"
                     ", swipe:3:d, killactive"
-                    ", edge:d:u, exec, kill $(pgrep wvkbd-mobintl) || wvkbd-mobintl"
+                    ", tap:3, togglefloating"
+                    ", edge:d:u, exec, kill $(pgrep wvkbd-mobintl) || wvkbd-mobintl -L 150"
+                ];
+                hyprgrass-bindm = [
+                    ", longpress:2, movewindow"
+                    ", longpress:3, resizewindow"
                 ];
             };
         };

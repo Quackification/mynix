@@ -3,6 +3,7 @@
     ./fastfetch
     ./hyprland
     ./waybar
-    ./kitty
+    ./rofi
+    ./kitty.nix
   ];
 }

@@ -92,7 +92,23 @@
   security.polkit.enable = true;
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
-
+  # auto gc
+  nix.gc = {
+    automatic = true;
+    dates = "weekly";
+    options = "--delete-older-than 7d";
+  };
+  # auto update
+  system.autoUpgrade = {
+    enable = true;
+    flake = "github:Quackification/nix-conf";
+    flags = [
+      "--update-input"
+      "--commit-lock-file"
+      "nixpkgs"
+    ];
+    dates = "weekly";
+  };
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.albert = {
     isNormalUser = true;
@@ -165,8 +181,6 @@
     librewolf
     libreoffice
     lunar-client
-    maliit-keyboard
-    maliit-framework
     prismlauncher
     kdePackages.extra-cmake-modules
     kdePackages.qtvirtualkeyboard
@@ -204,7 +218,6 @@
     hyprshot
     libnotify
     networkmanagerapplet
-    rofi-wayland
     swww
     wvkbd
 ];
