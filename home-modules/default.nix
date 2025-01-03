@@ -4,6 +4,7 @@
     ./hyprland
     ./waybar
     ./rofi
+    ./dunst.nix
     ./kitty.nix
   ];
 }

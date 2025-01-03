@@ -213,7 +213,6 @@
   '')
     #hyprland
     brightnessctl
-    dunst
     hyprpolkitagent
     hyprshot
     libnotify
