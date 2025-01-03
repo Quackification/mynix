@@ -201,6 +201,7 @@
     #java
     gcc
     gradle
+    jdk17
     jdk23
     maven
     ncurses

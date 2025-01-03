@@ -23,6 +23,7 @@
         system = "x86_64-linux";
         modules = [
           ./configuration.nix
+          frc-nix.nixosModules.default
           ({ pkgs, ... }: {
             nixpkgs.overlays = [
               fenix.overlays.default

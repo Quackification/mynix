@@ -24,9 +24,13 @@
             }
             {
                     "type"= "custom";
-                    "format"= "--------------------";
+                    "format"= "──────────────────────────────";
             }
-            "os"
+            {
+                type = "os";
+                format = "{3}";
+
+            }
             "host"
             "kernel"
             "uptime"
@@ -34,37 +38,23 @@
             "shell"
             "de"
             "wm"
-            "wmtheme"
-            "theme"
-            "icons"
-            "font"
-            "cursor"
             "terminal"
-            "terminalfont"
-            {
-                    "type"= "custom";
-                    "format"= "--------------------";
-            }
+            "break"
             {
                     "type"= "custom";
                     "format"= "{#1}{#94}Hardware Information{#94}{#1}";
             }
             {
                     "type"= "custom";
-                    "format"= "--------------------";
+                    "format"= "──────────────────────────────";
             }
             {
                     "type"= "cpu";
                     "showPeCoreCount"= false;
                     "temp"= false;
-            }
-            {
-                    "type"= "gpu";
-                    "driverSpecific"= true;
-                    "temp"= false;
+                    format = "{}";
             }
             "memory"
-            "swap"
             "disk"
             "battery"
             "poweradapter"
